@@ -1,0 +1,13 @@
+{% extends '../index.html' %}
+{% load crispy_forms_tags %}
+
+
+<div class="container">
+    <h2>Create a post</h2>
+    <form mothod="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy}}
+        <button class="btn btn-success" type="submit">Create post</button>
+    </form>
+</div>
+{% endblock content%}
